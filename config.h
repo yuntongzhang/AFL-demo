@@ -86,6 +86,11 @@
 #define KEEP_UNIQUE_HANG    500
 #define KEEP_UNIQUE_CRASH   5000
 
+/* Desired number of pass and fail test to save: */
+
+#define PASS_WANTED         5000
+#define FAIL_WANTED         5000
+
 /* Baseline number of random tweaks during a single 'havoc' stage: */
 
 #define HAVOC_CYCLES        256
@@ -101,7 +106,7 @@
 #define HAVOC_MIN           16
 
 /* Maximum stacking for havoc-stage tweaks. The actual value is calculated
-   like this: 
+   like this:
 
    n = random between 1 and HAVOC_STACK_POW2
    stacking = 2^n
@@ -277,6 +282,7 @@
 /* Environment variable used to pass SHM ID to the called program. */
 
 #define SHM_ENV_VAR         "__AFL_SHM_ID"
+#define MARKER_SHM_ENV_VAR  "__AFL_MARKER_SHM_ID"
 
 /* Other less interesting, internal-only variables. */
 
@@ -297,6 +303,10 @@
 /* Distinctive exit code used to indicate MSAN trip condition: */
 
 #define MSAN_ERROR          86
+
+/* Distinctive exit code used to indicate UBSAN trap condition: */
+
+#define UBSAN_ERORR         87
 
 /* Designated file descriptors for forkserver commands (the application will
    use FORKSRV_FD and FORKSRV_FD + 1): */
