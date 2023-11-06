@@ -1,5 +1,10 @@
 # american fuzzy lop
 
+> Demo for showing how AFL works. Program and seeds used for demo are in `demo/`.
+
+---
+
+
 [![Build Status](https://travis-ci.org/google/AFL.svg?branch=master)](https://travis-ci.org/google/AFL)
 
 Originally developed by Michal Zalewski <lcamtuf@google.com>.
